@@ -2,6 +2,13 @@
 
 IPerf3 is built on a `client-server` model and measures maximum User Datagram Protocol, TCP and Stream Control Transmission Protocol throughput between client and server stations. It can also be used to measure LAN and wireless LAN throughput.
 
+Server Client Concept for Testing `IPerf`.
+
+- **Server:** The data receiving node is referred as Server.
+- **Client:** The data sending node is referred as Client.
+
+![image](https://user-images.githubusercontent.com/6643905/214623102-f2a7ed12-e602-4f6a-a9fc-afc49f7b6ef9.png)
+
 ## Pre-requisites
 
 - Have a K8s/minikube cluster installed
