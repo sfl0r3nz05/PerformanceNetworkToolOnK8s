@@ -56,5 +56,5 @@ IPerf3 is built on a `client-server` model and measures maximum User Datagram Pr
     iperf3-0.2.1.tgz
     ```
 
-    > This file is included into this repository in the directory ~/PerformanceNetworkToolsOnK8s/Iperf3/iperf3-0.2.1.tgz
+    > This file is included into this repository in the directory: `~/PerformanceNetworkToolsOnK8s/Iperf3/iperf3-0.2.1.tgz`
 
