@@ -18,7 +18,7 @@ Server Client Concept for Testing `IPerf`.
 1. Clone the IPerf repository
 
    ```console
-   git clone https://eugenmayer.github.io/helm-charts/
+   git clone https://github.com/EugenMayer/helm-charts.git
    ```
 
 2. Go to Iperf3 repository
