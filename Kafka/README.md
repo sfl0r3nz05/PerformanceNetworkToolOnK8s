@@ -26,18 +26,12 @@
    helm dependency update
    ```
 
-4. Install Kafka helm chart
+4. Install Kafka and Zookeeper cluster from helm chart
+
+   > **Note:** Zookeeper is included in the Kafka helmchart in step number 3.
 
    ```console
-   cd ~/PerformanceNetworkToolOnK8s/Kafka/charts/kafka
-   helm install . -n kafka
-   ```
-
-5. Install Zookeeper helm chart
-
-   ```console
-   cd ~/PerformanceNetworkToolOnK8s/Kafka/charts/zookeeper
-   helm install . -n kafka
+   helm install kafka . -n kafka
    ```
 
 ## Test kafka as client on a remote machine
