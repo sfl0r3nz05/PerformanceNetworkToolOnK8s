@@ -6,12 +6,9 @@ metadata:
   name: zookeeper-service
   namespace: kafka
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
-    - name: zookeeper-port
-      port: 2181
-      nodePort: 30181
-      targetPort: 2181
+    - port: 2181
   selector:
     app: zookeeper
 ---
