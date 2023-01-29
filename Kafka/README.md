@@ -5,18 +5,53 @@
 - Have docker installed
 - Have a K8s/minikube cluster installed
 
-## Install Kafka cluster on Minikube
+## Install Kafka cluster on Minikube V1.22
 
-1. Go to Kafka/charts repository
+1. Modify the values of the `value.yaml` file in `Kafka` according to your requirements. Some configurations:
+
+   - Number of replicas:
 
    ```console
-   cd ~/PerformanceNetworkToolOnK8s/Kafka/charts
+   replicas: 1
+   ```
+
+   - Enable external access:
+
+   ```console
+   external:
+     enabled: true
+   ```
+
+   - Configure the external access, modifying the external IP address. E.g.: 3.94.152.36:
+
+   ```console
+   configurationOverrides:
+     "advertised.listeners": EXTERNAL://3.94.152.36:31090
+   ```
+
+   ```console
+     "listener.security.protocol.map": |-
+       PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+   ```
+
+2. Modify the values of the `value.yaml` file in `Zookeeper` according to your requirements.
+
+   - Number of replicas:
+
+   ```console
+   replicas: 1
    ```
 
 2. Create namespace
 
    ```console
    kubectl create namespace kafka
+   ```
+
+2. Go to Kafka/charts repository
+
+   ```console
+   cd ~/PerformanceNetworkToolOnK8s/Kafka/charts
    ```
 
 3. Update the kafka helm repository
